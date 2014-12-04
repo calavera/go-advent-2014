@@ -66,6 +66,11 @@ func main() {
 		panic(err)
 	}
 
+	err = idx.Write()
+	if err != nil {
+		panic(err)
+	}
+
 	tree, err := repo.LookupTree(treeId)
 	if err != nil {
 		panic(err)
